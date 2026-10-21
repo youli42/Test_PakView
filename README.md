@@ -29,7 +29,7 @@ git submodule update --init --recursive
   -Project="E:\E_SATA_WP\UE\Test_PakView\Test_PakView.uproject" -WaitMutex -FromMsBuild
 ```
 
-打开 `Test_PakView.uproject` 后，菜单 **Tools → SizeTool → PakStat 包体分析** 打开 PakStat 主窗口（文件夹树 + Class 面板 + 树图）；**Tools → SizeTool → 资产排行** 打开独立的资产排行窗口。内容按 Content / 引擎目录 / 引擎插件 / 项目插件 四类分组，可用工具栏「内容」区域的对应开关控制显隐。
+打开 `Test_PakView.uproject` 后，菜单 **Tools → SizeTool → PakStat 包体分析** 打开 PakStat 主窗口（文件夹树 + Class 面板 + 树图）；**Tools → SizeTool → 资产排行** 打开独立的资产排行窗口。内容按 Content / 引擎目录 / 引擎插件 / 项目插件 四类分组，可用工具栏「内容」区域的对应开关控制显隐。主窗口还提供「打包并扫描」（UAT 打包 + cooked 体积）、「记录快照」与「历史」（历史快照与 diff）；无头定时任务用 `Plugins/PakViz/Scripts/HeadlessPakScan.bat`。
 
 无头验证：
 
