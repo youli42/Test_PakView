@@ -29,7 +29,7 @@ git submodule update --init --recursive
   -Project="E:\E_SATA_WP\UE\Test_PakView\Test_PakView.uproject" -WaitMutex -FromMsBuild
 ```
 
-打开 `Test_PakView.uproject` 后，菜单 **Tools → PakViz → Open PakViz** 打开分析页签。
+打开 `Test_PakView.uproject` 后，菜单 **Tools → PakViz → 打开 PakViz** 打开 PakStat 主窗口（文件夹树 + Class 面板 + 树图）；**Tools → PakViz → 资产排行** 打开独立的资产排行窗口。
 
 无头验证：
 
@@ -37,12 +37,14 @@ git submodule update --init --recursive
 "C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor-Cmd.exe" ^
   "E:\E_SATA_WP\UE\Test_PakView\Test_PakView.uproject" ^
   -unattended -nop4 -nosplash -nullrhi -stdout ^
-  -ExecCmds="PakViz.OpenTab,PakViz.Scan,PakViz.Exit" ^
+  -ExecCmds="PakViz.OpenTab,PakViz.OpenAssetRanking,PakViz.Scan,PakViz.SelfTest,PakViz.Exit" ^
   -abslog="E:\E_SATA_WP\UE\Test_PakView\Saved\Logs\PakViz_Verify.log"
 ```
 
+通过标准：日志出现 `PakViz self test finished`，且无 `Assertion failed` / `Fatal error`。
+
 ## 说明
 
-- 本工程 `Content` 为空，扫描结果主要来自 `/Engine` 和插件内容，属预期。
+- 本工程 `Content` 为空，扫描结果主要来自 `/Engine` 和插件内容，属预期（PakStat 页的 `/Game` 业务分组为空）。
 - 插件是 Editor-only，不参与 cook/打包。
 - 插件使用、数据口径、路线图见 [Plugins/PakViz/README.md](Plugins/PakViz/README.md)。
