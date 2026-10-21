@@ -29,7 +29,7 @@ git submodule update --init --recursive
   -Project="E:\E_SATA_WP\UE\Test_PakView\Test_PakView.uproject" -WaitMutex -FromMsBuild
 ```
 
-打开 `Test_PakView.uproject` 后，菜单 **Tools → PakViz → 打开 PakViz** 打开 PakStat 主窗口（文件夹树 + Class 面板 + 树图）；**Tools → PakViz → 资产排行** 打开独立的资产排行窗口。
+打开 `Test_PakView.uproject` 后，菜单 **Tools → PakViz → 打开 PakViz** 打开 PakStat 主窗口（文件夹树 + Class 面板 + 树图）；**Tools → PakViz → 资产排行** 打开独立的资产排行窗口。引擎/插件内容统一收在文件夹树的 **Plugins** 父节点下，可用工具栏「内容」区域的引擎/插件/脚本开关控制显隐。
 
 无头验证：
 
